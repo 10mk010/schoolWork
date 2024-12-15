@@ -418,7 +418,7 @@ console.log(persona.lastName);
 
 
 
-// 1.1. Sugeneruokite masyva is 30 elementu (indeksai nuo 0 iki 29), kuriu reiksmes yra atsitiktiniai skaiciai nuo 5 iki 25
+/* 1.1. Sugeneruokite masyva is 30 elementu (indeksai nuo 0 iki 29), kuriu reiksmes yra atsitiktiniai skaiciai nuo 5 iki 25
 
 const masyvas = Array(30).fill().map(() => Math.floor(Math.random() * 21) + 5);
 console.log(masyvas)
@@ -471,3 +471,123 @@ console.log(masyvas);
 let minIndex = masyvas.findIndex((value) => value > 10);
 console.log(minIndex);
 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOOPS PRATYBOS */
+
+/* 1. Parasykite programa kuri atspausdintu visus vienazenklius skaicius */
+
+//  for(let i = 0; i < 10; i++){
+//    console.log(i)
+//  }
+//  
+
+
+
+/* 2. parasykite programa kuri parasytu visus vienazenklius skaicius pakeltus kvadratu */
+
+//  for(let i = 0; i < 10; i++){
+//    console.log(Math.pow(i, 2));
+//  }
+
+
+/* 3. Parasykite programa kuri atspausdintu visus dvizenklius lyginius skaicius */
+
+//  for(let i = 10; i < 100; i++){
+//    if(i % 2 == 0){
+//      console.log(i);
+//    }
+//  }
+
+
+/* 4. Parasykite programa, kuri atspausdintu tik tiek skaiciu, pradedant nuo 1, iki to kuri ivede vartotojas */
+
+//  let input = Number(prompt("Iveskite skaiciu iki kurio noretumete, kad programa suskaiciuotu."));
+//  for(let i = 0; i <= input; i++){
+//    console.log(i);
+//  }
+
+
+/* 5. Parasykite programa, kuri atspausdintu skaicius is jusu nurodyto intervalo [a,b]. */
+
+//  let intervalStart = Number(prompt("Iveskite skaiciu nuo kurio noretumete, kad programa pradetu suskaiciuotu."));
+//  let intervalEnd = Number(prompt("Iveskite skaiciu iki kurio noretumete, kad programa suskaiciuotu."));
+//  
+//  for(let i = intervalStart; i <= intervalEnd; i++){
+//    console.log(i);
+//  }
+
+
+/* 6. Parasykite programa, kuri atspausdintu jusu varda n kartu */
+
+//  let inputName = prompt("Iveskite savo varda");
+//  let inputX = Number(prompt("iveskite kiek kartu noretumete kad programa atspausdintu jusu varda."));
+//  
+//  let i = 0;
+//  while(i <= inputX) {
+//    console.log(`${i + 1}. ${inputName}`);
+//    i++;
+//  };
+
+
+/* 7. Parasykite programa kur atspausdintu ivesto skaiciaus daugybos lentele nuo 1 iki 10 */
+
+//  let input = Number(prompt("Iveskite skaiciu kurio daugybos lentele norite pamatyti"));
+//  
+//  for(let i = 0; i <= 10; i++){
+//    console.log(`${input} * ${i} = ${input * i}`);
+//  }
+
+
+/* 8. Parasykite programa, skaiciuojancia funkcijos y = 7 * 2 + 5x - 3 reikmes, kai x kinta [-10; 10] */
+
+//  let count = 1;
+//  for(let i = -10; i <= 10; i++){
+//    console.log(`${count}. Kai y = ${i}: 7 * 2 + 5 * ${i} - 3 = ${7 * 2 + 5 * i - 3}`);
+//    count++;
+//  }
+
+
+/* 9. Pries Kaledas misko uredijos prekiauja ivairaus auksio eglutemis. 
+      I prekybos vieta atvezta n kiekis egluciu. 
+      Ju auksciai yra h1, h2, ..., hn. 
+      Parasykite programa, skaiciuojancia vidutini eglutes auksti.
+      NENAUDOTI masyvo, egluciu kieki ir aukscius ivesti prompt pagalba, 
+      rezultata grazinti alert zinute. 
+
+
+      const average = count > 0 ? sum / count : 0;
+      
+      
+*/
+
+//  const treeN = Number(prompt("Iveskite kiek egluciu isviso yra:"));
+//  let treeSum = 0;
+//  
+//  for(let i = 1; i <= treeN; i++){
+//    let treeHinput = prompt(`iveskite ${i} eglutes auksti metrais.`);
+//    let treeH = Number(treeHinput);
+//    treeSum += treeH;
+//    console.log(treeSum)
+//    if(i == treeN){
+//      const treeAvg = treeN > 0 ? treeSum / treeN : 0;
+//      window.alert(`visu egluciu auksciu vidurkis: ${treeAvg}`)
+//    }
+//  }
