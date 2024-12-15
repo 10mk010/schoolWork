@@ -473,19 +473,122 @@ console.log(minIndex);
 
 */
 
+/* 1.2 pratybos */
+
+/* 1.2.1 Sugeneruokite masyva, kurio reiksmes atsitiktines raides A, B, C, D, o ilgis 200. */
+
+//    const masyvas = Array(200).fill().map(() => ['A', 'B', 'C', 'D'][Math.floor(Math.random() * 4)]);
+//    console.log(masyvas);
+
+/* 1.2.2  Isrusiuokite 1 uzdavinio masyva pagal abecele */
+
+//    console.log(masyvas.sort());
 
 
+/* 1.2.3 Sugeneruokite du masyvus, kurie reiksmes yra atsitiktinai skaiciai nuo 100 iki 999. Masyvu ilgiai 100. Masyvu reikmes turi buti unikalios savo masyve (t.y. neturi kartotis). */
+
+//    const masyvas1 = Array(100).fill().map(() => Math.floor(Math.random() * 900) + 100);
+//    const masyvas2 = Array(100).fill().map(() => Math.floor(Math.random() * 900) + 100);
+//    console.log(masyvas1, masyvas2);
+
+/* 1.2.4 Sugeneruokite masyva, kuris butu sudarytas is reiksmiu, kurios yra pirmame 3 uzdavinio masyve, bet nera antrame 3 uzdavinio masyve. */
+
+//    const masyvas11 = masyvas1.filter((x) => x !== masyvas2);
+//    console.log(Math.floor(masyvas11);
+
+/* 1.2.5 Sugeneruokite masyva is elementu, kurie kartojasi abiejuose 3 uzdavinio masyvuose. */
+
+//    let masyvas12 = masyvas1.filter((x) => masyvas2.includes(x));
+//    console.log(masyvas12);
+
+/* 1.2.6 Sugeneruokite 10 skaiciu masyva pagal taisykle. Du pirmi skaiciai - atsitiktinai nuo 5 iki 25. Trecias, pirmo ir antro suma. Ketvirtas - antro ir trecip suma. Penktas trecio ir ketvirto suma ir t.t. */
+
+//  const arr = Array(10).fill(0);
+//  arr.map(() => {
+//    arr[0] = Math.floor(Math.random() * 21) + 5;
+//    arr[1] = Math.floor(Math.random() * 21) + 5;
+//    for(let i = 2; i < arr.length; i++){
+//      arr[i] = arr[i - 1] + arr[i - 2];
+//    };
+//  });
+//  console.log(arr);
+
+/* 1.3 PRATYBOS */
+
+/* 1.3.1 Sukurkite objekta su keliomis savybemis, o tada pridekite nauja savybe. */
+
+// const obj = {
+// name: "Tomas",
+//  lastName: "Tomaitis"
+// };
+//  obj.age = 18;
+//  console.log(obj);
+
+/* 1.3.2 Istrinkita savybe is objekto ir parodykite likusias savybes */
+
+//  delete obj.age;
+//  console.log(obj);
+
+/* 1.3.3 Patikrinkite ar tam tikra saybe egzistuoja objekte */
+
+//  console.log(obj.hasOwnProperty("age"));
+
+/* 1.3.4 Sukurti objekta, kuris turetu skaitnes reiksmes. Apsaiciuoti visu savybiu reiksmiu suma. */
+
+//  const obj = {
+//    a: 1,
+//    b: 2,
+//    c: 3,
+//    d: 4,
+//    e: 5,
+//    f: 6,
+//    g: 7,
+//    h: 8,
+//    i: 9,
+//    j: 10
+//  };
+//  let suma = 0;
+//  for(let key in obj){
+//    suma += obj[key];
+//  }
+//  console.log(suma);
 
 
+/* 1.3.5 Sukurkite funkcija, kuri priima objekta ir grazina nauja objekta, kuriame yra tik tos savybes, kuriu reiksmes yra didesnes uz tam tikra skaiciu*/
+
+//  function filter(obj, x){
+//    let newObj = {};
+//    for(let key in obj){
+//      if(obj[key] > x){
+//          newObj[key] = obj[key];
+//        }
+//      }
+//      return newObj;
+//    }
+//    console.log(filter(obj, 5));
+
+/* 1.3.6 Sukurkite funkcija, kuri priima objekta ir grazina tekstini aprasyma su visomis savybemis */
+
+// function objToString(obj){
+//    let str = "";
+//    for(let key in obj){
+//    str += key + "\n";
+//    }
+//    return str;
+// };
+// console.log(objToString(obj));
 
 
+/* 1.3.7 Sukurkite funkcija, kuri grazina objekto savybiu sskaiciu. */
 
-
-
-
-
-
-
+// function numOfKeys(obj){
+//    let count = 0;
+//    for(let key in obj){
+//    count++;
+//    }
+//    return count;
+// };;
+// console.log(numOfKeys(obj));
 
 
 
