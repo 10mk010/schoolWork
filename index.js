@@ -694,3 +694,253 @@ console.log(minIndex);
 //      window.alert(`visu egluciu auksciu vidurkis: ${treeAvg}`)
 //    }
 //  }
+
+/* 1 PRATYBOS */
+
+// 1. isspausdinti visus masyvo elementus panaudojant for cikla ir array metoda
+
+//  const arr = Array(5).fill().map(() => Math.floor(Math.random() * 5));
+//  for(let i in arr){
+//    console.log(arr[i]);
+//  }
+
+// 2. Susumuoti visus masyvo tkaicius timis budais: naudoti for cikla ir du skirtingus array metodus 
+
+//  const arr = Array(5).fill().map(() => Math.floor(Math.random() * 5));
+//  let sum = 0;
+//  for(let i in arr){
+//    sum += arr[i];
+//  }
+//  console.log("1 budas: " + sum);
+
+//  arr.forEach((i) => sum += i);
+//  console.log("2 budas: " + sum);
+
+//  arr.every((i) => sum += i);
+//  console.log("3 budas: " + sum);
+
+
+/*  
+  3. is sugalvoto 10 zodziu sakinio sukurti masyva. 
+  Is to masyvo padaryti du masyvus: lyginiu indeksu zodzius iskelti i nauja masyva, 
+  neliginiu indeksu zodzius - i kita masyva. 
+  Is tu atskiru masyvu padaryti du atskirus sakinius.
+*/
+/*
+const sentence = "Hello there Vsauce does Micheal go here the ! immediately.";
+const sentenceArr = sentence.split(" ");
+const evenArr = [];
+const oddArr = [];
+for(let i in sentenceArr){
+  if(i % 2 == 0){
+    evenArr.push(sentenceArr[i]);
+  } else {
+    oddArr.push(sentenceArr[i]);
+  }
+}
+console.log(evenArr.join(" "));
+console.log(oddArr.join(" "));
+*/
+
+// 4. Is skaiciu masyvo pasalinti tris elementus nuo to elemento, kurio reikme yra maziausia. 
+/*
+const arr = Array(10).fill().map(() => Math.floor(Math.random() * 10));
+console.log(arr);
+const min = Math.min(...arr);
+const minIndex = arr.indexOf(min);
+arr.splice(minIndex, 3);
+console.log(arr);
+*/
+
+
+/* 2 PRATYBOS */
+
+// 1. Rasti automobiliu markiu masyve "bentley" ir jei jo nera, ideti.
+/*
+const arr = ["bmw", "audi", "mercedes"];
+
+if(!arr.includes("bentley")){
+  arr.push("bentley");
+}
+console.log(arr);
+*/
+
+// 2. Sukurti prekiu masyva, kuriame butu pasaikartojanciu elementu. 
+// Loopinti per masyva ir sukurti nauja unikaliu prekiu masyva (naudoti indexOf) 
+// is pirmojo prekiu masyvo.
+
+/*
+const arr = ["banana", "apple juice", "olive oil", "sunflower seeds", "banana", "diapers", "banana", "newspaper"];
+const newArr = [];
+for(let i in arr){
+  if(newArr.indexOf(arr[i]) == -1){
+    newArr.push(arr[i]);
+  }
+}
+console.log(newArr);
+*/
+
+// 3. Sukurti vaisiu masyva, kuriame butu pasikartojanciu elementu. Loopinti per masyva ir sukurti nauja unikaliu prekiu masyva (naudoti includes) is pirmojo vaisiu masyvo.
+/*
+const arr = ["banana", "apple", "pear", "banana", "peach", "pineapple", "banana", "pear", "lychee", "pomegranate", "pear"];
+const newArr = [];
+for(let i in arr){
+  if(!newArr.includes(arr[i])){
+    newArr.push(arr[i]);
+  }
+}
+console.log(newArr);
+*/
+
+// 4. Sukurti skaiciu masyva
+// a. prasukti cikla ir lyginius skaicius pakeisti vardais
+// b. panaudojant string metoda pakeisti visas raides i didziasias.
+
+/*
+const arr = Array(10).fill().map(() => Math.floor(Math.random() * 10));
+for(let i in arr){
+  if(arr[i] % 2 == 0){
+    arr[i] = "vardas".toUpperCase();
+  }
+}
+console.log(arr);
+*/
+
+
+/* 4 PRATYBOS */
+
+// Isspausdinti konsoleje objekto duomenis
+
+/*
+let duomenys = {
+  id : "0001",
+  type: "donut",
+  name: "Cake",
+  ppu: 0.55,
+  topping: [
+    {
+      id: "5001",
+      type: "None"
+    },
+    {
+      id: "5002",
+      type: "Glazed"
+    },
+    {
+      id: "5005",
+      type: "Sugar"
+    },
+    {
+      id: "5007",
+      type: "Powdered Sugar"
+    },
+    {
+      id: "5006",
+      type: "Chocolate with Sprinkles"
+    },
+    {
+      id: "5003",
+      type: "Chocolate"
+    },
+    {
+      id: "5004",
+      type: "Maple"
+    }
+  ]
+}
+
+for(let i = 0; i < duomenys.topping.length; i++) {
+  console.log("id: " + duomenys.topping[i].id);
+  console.log("type: " + duomenys.topping[i].type);
+}
+
+*/
+
+
+/* 5 PRATYBOS */
+
+// Atspausdinti duomenis fmaily ir Knygos is nuorodos pagal pateikta pavyzdi:
+// Sukurti masyva su knygu pavadinimais, kuriu isleidimo metai velesni nei 2015m.
+
+/*
+const arr = [
+  {
+    name: "Book 1",
+    author: "Author 1",
+    year: 2016,
+    isbn: "978-0-123456-01-2",
+    price: 19.99
+  },
+  {
+    name: "Book 2",
+    author: "Author 2",
+    year: 2017,
+    isbn: "978-0-123456-02-9",
+    price: 24.99
+  },
+  {
+    name: "Book 3",
+    author: "Author 3",
+    year: 2018,
+    isbn: "978-0-123456-03-6",
+    price: 29.99
+  },
+  {
+    name: "Book 4",
+    author: "Author 4",
+    year: 2019,
+    isbn: "978-0-123456-04-3",
+    price: 22.99
+  },
+  {
+    name: "Book 5",
+    author: "Author 5",
+    year: 2020,
+    isbn: "978-0-123456-05-0",
+    price: 27.99
+  },
+  {
+    name: "Book 6",
+    author: "Author 6",
+    year: 2021,
+    isbn: "978-0-123456-06-7",
+    price: 21.99
+  },
+  {
+    name: "Book 7",
+    author: "Author 7",
+    year: 2022,
+    isbn: "978-0-123456-07-4",
+    price: 25.99
+  }
+]
+for(let i in arr){
+  console.log("isbn --> " + arr[i].isbn);
+  console.log("price --> " + arr[i].price);
+  console.log("year --> " + arr[i].year);
+  console.log("name --> " + arr[i].name);
+  console.log("author --> " + arr[i].author);
+  if(i < arr.length - 1){
+    console.log("--------------------------------");
+  };
+}
+*/
+
+const family = {
+  grandparents: {
+    grandma: 'Marge',
+    grandpa: 'Homer'
+  },
+  parents: {
+    mom: 'Lisa',
+    dad: 'Millhouse'
+  },
+  children: {
+    daughter: 'Anne',
+    son1: 'Peter',
+    son2: 'Bob',
+  }
+};
+for(let i in family){
+  console.log([i] + ": " + [i] );
+}
