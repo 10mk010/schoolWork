@@ -881,7 +881,7 @@ const arr = [
   {
     name: "Book 3",
     author: "Author 3",
-    year: 2018,
+    year: 2014,
     isbn: "978-0-123456-03-6",
     price: 29.99
   },
@@ -902,7 +902,7 @@ const arr = [
   {
     name: "Book 6",
     author: "Author 6",
-    year: 2021,
+    year: 2003,
     isbn: "978-0-123456-06-7",
     price: 21.99
   },
@@ -915,17 +915,21 @@ const arr = [
   }
 ]
 for(let i in arr){
-  console.log("isbn --> " + arr[i].isbn);
-  console.log("price --> " + arr[i].price);
-  console.log("year --> " + arr[i].year);
-  console.log("name --> " + arr[i].name);
-  console.log("author --> " + arr[i].author);
-  if(i < arr.length - 1){
-    console.log("--------------------------------");
-  };
+  if(arr[i].year >= 2015){
+    console.log("isbn --> " + arr[i].isbn);
+    console.log("price --> " + arr[i].price);
+    console.log("year --> " + arr[i].year);
+    console.log("name --> " + arr[i].name);
+    console.log("author --> " + arr[i].author);
+    if(i < arr.length - 1){
+      console.log("--------------------------------");
+    };
+  }
 }
 */
 
+
+/*
 const family = {
   grandparents: {
     grandma: 'Marge',
@@ -944,3 +948,329 @@ const family = {
 for(let i in family){
   console.log([i] + ": " + [i] );
 }
+*/
+
+
+
+/* 6 PRATYBOS */
+
+/* Restorane pietavo trys seimos. Visi isleido skirtingas sumas pinigu. Apsakaiciuokite kiek arbatpinigiu tures palikti kiekviena seima ir kokia bus galutine sumokama pinigu suma, jei: 
+
+1. saskaita maziau nei 50 eur, paliekama 20% nuo saskaitos suma,
+2. saskaita didesne nei 50eur, bet maziau uz 200eur - 15%,
+3. saskaita didesne ar lygi 200eur - 10%.
+
+Atsakymus atspausdinti konsoleje masyvu pavidalu
+*/
+
+/*
+const families = [
+  {
+    familyNr: 1,
+    moneySpent: 35
+  },
+  {
+    familyNr: 2,
+    moneySpent: 125
+  },
+  {
+    familyNr: 3,
+    moneySpent: 225
+  }
+]
+
+for(let i in families){
+  const spent = families[i].moneySpent;
+  let tip = 0;
+  if(spent >= 200){
+    tip = spent / 100 * 10; 
+  } else if(spent > 50 && spent < 200){
+    tip = spent / 100 * 15;
+  } else if(spent <= 50){
+    tip = spent / 100 * 20;
+  }
+  console.log(`Family number ${families[i].familyNr} has spent ${spent}$ and should leave a ${tip}$ tip.`);
+}
+*/
+
+
+
+/* 7 PRATYBOS */
+
+
+
+const questions1 = [
+  {
+    id: 1,
+    question: "Kuri HTML versija yra naudojama šiuo metu?",
+    answers: [
+      { text: 2, isCorrect: false },
+      { text: 5, isCorrect: true },
+      { text: 7, isCorrect: false },
+      { text: 3, isCorrect: false },
+      { text: 8.3, isCorrect: false },
+    ],
+  },
+  {
+    id: 2,
+    question:
+      "Kokį HTML semantinį elementą parinktumėte tinklapio naujienai aprašyti?",
+    answers: [
+      { text: "<news>", isCorrect: false },
+      { text: "<article>", isCorrect: true },
+      { text: "<section>", isCorrect: false },
+      { text: "<main>", isCorrect: false },
+      { text: "Nėra teisingo atsakymo", isCorrect: false },
+    ],
+  },
+  {
+    id: 3,
+    question: "Kokią display reikšmę turi HTML a elementas pagal nutylėjimą?",
+    answers: [
+      { text: "inline", isCorrect: true },
+      { text: "block", isCorrect: false },
+      { text: "inline-block", isCorrect: false },
+      { text: "table", isCorrect: false },
+    ],
+  },
+  {
+    id: 4,
+    question:
+      "Kuris selektorius yra teisingas norint stilių taikyti tik pdf failams?",
+    answers: [
+      { text: "a[href >='.pdf']", isCorrect: false },
+      { text: "a[href $='.pdf']", isCorrect: false },
+      { text: "a[href only ='.pdf']", isCorrect: false },
+      { text: "a[href='.pdf']", isCorrect: true },
+      { text: "Nėra teisingo atsakymo", isCorrect: false },
+    ],
+  },
+  {
+    id: 5,
+    question:
+      "Kokią klasę reikia priskirti HTML blokui, kad jis Bootstrap grid'e užimtų 5 stulpelius praleidžiant vieną stulpelį?",
+    answers: [
+      { text: ".columns-5-offset-1", isCorrect: false },
+      { text: ".col-sm5-1", isCorrect: false },
+      { text: ".col-sm-5 .col-offset-1", isCorrect: false },
+      { text: ".col-sm-5 .col-sm-offset-1", isCorrect: true }, // ar tikrai?
+    ],
+  },
+  {
+    id: 6,
+    question:
+      "Kaip kintamajam antraste, kuriam priskirtas HTML elementas header pakeisti fono spalvą naudojant JavaScript?",
+    answers: [
+      { text: "antraste.style.background-color = 'tomato';", isCorrect: false },
+      { text: "antraste.style.backgroundColor = 'tomato';", isCorrect: true },
+      { text: "antraste.css.background-color= 'tomato';", isCorrect: false },
+      { text: "Teisingo atsakymo nėra", isCorrect: false },
+    ],
+  },
+  {
+    id: 7,
+    question: "Kaip importuoti išorinį scss failą į pagrindinį scss failą?",
+    answers: [
+      { text: "@include isorinis_failas", isCorrect: false },
+      { text: "@add isorinis_failas", isCorrect: false },
+      { text: "@import isorinis_failas", isCorrect: true },
+      { text: "Nėra teisingo varianto", isCorrect: false },
+    ],
+  },
+  {
+    id: 8,
+    question:
+      "Kaip padaryt nuorodą į tėvinį html elementą a su tikslu aprašyti pseudo klasės :hover formatavimą?",
+    answers: [
+      { text: "extend a:hover", isCorrect: false },
+      { text: "into a:hover", isCorrect: false },
+      { text: "&:hover", isCorrect: true },
+      { text: "@:hover", isCorrect: false },
+    ],
+  },
+  {
+    id: 9,
+    question: "Kuris iš sąrašo nėra preprocesorius?",
+    answers: [
+      { text: "Ruby", isCorrect: true },
+      { text: "SASS", isCorrect: false },
+      { text: "LESS", isCorrect: false },
+      { text: "Stylus", isCorrect: false },
+      { text: "Nėra teisingo varianto", isCorrect: false },
+    ],
+  },
+  {
+    id: 10,
+    question:
+      "Kaip pasirinkti header elementą ir jį paslėpti naudojant jQuery?",
+    answers: [
+      { text: "$('header').diplayNone();", isCorrect: false }, //nezinau
+      { text: "$('header').hide();", isCorrect: true },
+      { text: "$('header').hideIt();", isCorrect: false },
+      { text: "Nėra teisingo atsakymo.", isCorrect: false },
+    ],
+  },
+  {
+    id: 11,
+    question: "Kokią template sistemą naudoja Drupal 8?",
+    answers: [
+      { text: "HTML", isCorrect: false },
+      { text: "Smarty", isCorrect: false },
+      { text: "Twig", isCorrect: true },
+      { text: "PHP", isCorrect: false },
+      { text: "Nėra teisingo varianto", isCorrect: false },
+    ],
+  },
+  {
+    id: 12,
+    question: "Kuo skiriasi kintamieji let nuo var ?",
+    answers: [
+      { text: "Nesiskiria", isCorrect: false },
+      {
+        text: "Var yra globalus kintamasis naudojamas visoje funkcijoje, o let yra vietinis kintamasis, naudojamas blokuose",
+        isCorrect: true,
+      },
+      {
+        text: "Var kintamasis yra skirtas tik tekstiniams kintamiesiams aprašyti, o let numerių kintamiesiems",
+        isCorrect: false,
+      },
+      {
+        text: "Var naudojamas tuomet kai kintamojo ilgis ne didesnis nei 5 simboliai, o let, kuomet daugiau nei 5",
+        isCorrect: false,
+      },
+      { text: "Nėra teisingo atsakymo", isCorrect: false },
+    ],
+  },
+  {
+    id: 13,
+    question: "Kam naudojamas 'use strict'?",
+    answers: [
+      {
+        text: "‘Use strict’ naudojimas apsaugo neleisdamas atlikti tam tikrų veiksmų ir suteikia daugiau išimčių",
+        isCorrect: false,
+      },
+      {
+        text: "Užkerta kelią klaidoms kai atliekami palyginti “nesaugūs” veiksami",
+        isCorrect: false,
+      },
+      {
+        text: "Išjungia painias ir blogai apgalvotas funkcijas",
+        isCorrect: false,
+      },
+      { text: "Visi atsakymai tesisingi", isCorrect: true },
+      { text: "Nėra teisingo atsakymo", isCorrect: false },
+    ],
+  },
+  {
+    id: 14,
+    question: "Kodėl CSS vadinami pakopiniais stiliais?",
+    answers: [
+      { text: "Kodas rašomas pakopomis", isCorrect: false },
+      {
+        text: "Pakopos nusako, kuri taisyklė yra svarbesnė ir bus taikoma elementui",
+        isCorrect: true,
+      },
+      {
+        text: "Įjungus CSS pakopas, galima naudoti !important",
+        isCorrect: false,
+      },
+      { text: "Teisingo atsakymo nėra", isCorrect: false },
+    ],
+  },
+  {
+    id: 15,
+    question: "Koks metodas naudojamas, norint sužinoti masyvo ilgį JS?",
+    answers: [
+      { text: "count", isCorrect: false },
+      { text: "length", isCorrect: true },
+      { text: "valueOf", isCorrect: false },
+      { text: "Nėra teisingo atsakymo", isCorrect: false },
+    ],
+  },
+  {
+    id: 16,
+    question: "Kiek laiko duomenys saugomi local storage?",
+    answers: [
+      { text: "Iki perkraunant puslapį", isCorrect: false },
+      { text: "Vieną parą", isCorrect: false },
+      { text: "Vieną mėnesį", isCorrect: false },
+      { text: "Metus laiko", isCorrect: false },
+      { text: "Neturi galiojimo laiko", isCorrect: true },
+    ],
+  },
+  {
+    id: 17,
+    question:
+      "let kiekis = 12; \n" +
+      "console.log(++kiekis); \n" +
+      "Ką išves konsolėje?",
+    answers: [
+      { text: "undefined", isCorrect: false },
+      { text: "12", isCorrect: false },
+      { text: "13", isCorrect: true },
+      { text: "Nieko", isCorrect: false },
+    ],
+  },
+  {
+    id: 18,
+    question: "Koks metodas naudojamas eilutės duomenis konvertuoti į masyvą?",
+    answers: [
+      { text: "shift()", isCorrect: false },
+      { text: "pop()", isCorrect: false },
+      { text: "splice()", isCorrect: false },
+      { text: "split()", isCorrect: true },
+    ],
+  },
+  {
+    id: 19,
+    question:
+      "function sveikas(){ \n" +
+      ' let vardas="Jonas" \n' +
+      "console.log(vardas)\n" +
+      "} \n" +
+      "sveikas();\n" +
+      "Ką atspausdins konsolėje?",
+    answers: [
+      { text: "Jonas", isCorrect: true },
+      { text: "vardas", isCorrect: false },
+      { text: "sveikas", isCorrect: false },
+      { text: "undefined", isCorrect: false },
+      { text: "nieko", isCorrect: false },
+    ],
+  },
+  {
+    id: 20,
+    question: "Kaip apibrėžiamas SASS kintamasis vardu spalva?",
+    answers: [
+      { text: "const sass spalva;", isCorrect: false },
+      { text: "const spalva;", isCorrect: false },
+      { text: "let spalva;", isCorrect: false },
+      { text: "$spalva string", isCorrect: false },
+      { text: "$spalva", isCorrect: true },
+    ],
+  },
+];
+// 1. Atspausdinti klausima ir teisinga atsakyma
+/*
+for(let i in questions1){
+  const correctAnswer = questions1[i].answers.find(answer => answer.isCorrect);
+  console.log(`${i} Klausimas: ${questions1[i].question}`);
+  console.log(`atsakymas: ${correctAnswer.text}`);
+  console.log('----------------------------------');
+}
+*/
+
+/* 
+  Sukurti interaktyvia viktorina, naudojant prompt ir alert.
+  Uzduokite vartotojui klausimus ir pateikite galimus pasirinkimus.
+  Jei vartotojas atsako teisingai, naudoti alert su zinute "teisingai".
+  Jei atsakymas neteisingas - "Neteisingai".
+  Baigus visus klausimus, rodyti tesingu atsakymu skaiciu ir pasveikinimo zinute,
+  Jei vartotojas atsake daugiau nei 50% klausimu teisingai.
+  Neleisti vartotojui pateikti tuscio atsakymo ar kitokios nei skaiciaus reiksmes.
+
+  questions1[i].answers.find(answer => answer.isCorrect);
+
+
+*/
+
