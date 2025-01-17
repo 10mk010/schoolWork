@@ -1,3 +1,10 @@
+html{
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    background-color: rgb(168, 200, 228);
+}
+/*
 .klase1{
     background-color: black;
 }
@@ -7,3 +14,4 @@
 #containerDiv{
     width: 100px;
 }
+*/

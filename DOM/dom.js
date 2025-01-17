@@ -84,23 +84,34 @@ textNode.addEventListener("click", () => {
 
 */
 
-//  UZDUOTYS
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+/*  UZDUOTYS
 // 1. sukurti elementa ir i ji "ideti" savo sugalvota teksta
 
 const textNode = document.createElement("h1");
 textNode.innerText = "Hello World! My name is Loremas Ipsumas";
+textNode.style.textAlign = "center";
 document.body.appendChild(textNode);
 
 // 2. Sukurti elementa ir i ji patalpinti kita elementa su tekstu
 
-const div = document.createElement("div");
-document.body.append("div");
+const div2 = document.createElement("div");
+document.body.append(div2);
 
-const img = document.createElement('img');
-img.src = "https://picsum.photos/200/300";
-img.alt = "Loremo Ipsumo Album";
-img.style.width = "500px";
-div.append(img);
+const text2 = document.createElement("p");
+text2.innerText = "Sveiki atvyke i lorem ipsum pasauli!"
+text2.style.textAlign = "center";
+div2.append(text2);
 
 // 3. pasizymeti elementa ir prideti jam atributa su reiksme: 
 // a. klase "myClass"
@@ -108,14 +119,123 @@ textNode.className = "myClass";
 // b. id "myId"
 textNode.id = "myId";
 // c. <a> ir <img> tagu atributus su reiksmemis
+
 const link = document.createElement("a");
-link.href = "https://www.google.com";
-link.innerText = "HelloWorld";
-div.append(link);
+link.setAttribute("href", "https://www.google.com");
+link.innerText = "google.com";
 
-const myDiv = document.createElement("div");
-myDiv.className = "myClass";
-myDiv.id = "myId";
-myDiv.style.width = "500px";
+const img = document.createElement("img");
+img.setAttribute("src", "https://picsum.photos/200/300");
+img.style.width = "150px";
 
+div2.append(link, img);
 
+// 4. Sukurti keleta p tagu div viduje, pasizymeti elementu masyva ir 
+// prideti jiemas stiliu - kas antro elemento 
+// raudonas tekstas ir juodas background, 
+// likusiu tekstas baltas, background zalias
+
+const div4 = document.createElement("div");
+document.body.append(div4);
+
+for(let i = 0; i < 5; i++) {
+  const p = document.createElement("p");
+  p.classList.add("p4")
+  p.innerText = `Eilute: ${i + 1}`;
+  div4.append(p);
+}
+
+const pArr = document.getElementsByClassName("p4")
+
+Array.from(pArr).forEach((el, i) => {
+  if((i + 1) % 2 != 0){
+    el.style.backgroundColor = "black";
+    el.style.color = "red";
+  } else { 
+    el.style.backgroundColor = "green";
+    el.style.color = "white";
+  }
+});
+
+// 5. Paimti reiksme is input ir ja atspausdinti konsoleje bei atvaizduoti puslapyje
+
+const input = document.createElement("input")
+input.setAttribute("type", "text");
+input.setAttribute("placeholder", "Iveskite teksta")
+document.body.appendChild(input);
+
+const inputBtn = document.createElement("input");
+inputBtn.setAttribute("type", "button");
+inputBtn.value = "Submit";
+document.body.appendChild(inputBtn);
+
+const output = document.createElement("p");
+output.innerText = "output: ";
+document.body.appendChild(output);
+
+inputBtn.addEventListener("click", () => {
+  output.innerText = "output: "
+  console.log(input.value);
+  output.innerText += input.value;
+})
+
+// 6. Sukurti du mygtukus: paspaudus pirmaji, 
+// sukuriamas naujas elementas, paspaudus antraji - elementas pasalinamas,
+// mygtukus stilizuoti su JS.
+
+const addBtn = document.createElement("input");
+addBtn.setAttribute("type", "button")
+addBtn.value = "Add";
+const deleteBtn = document.createElement("input");
+deleteBtn.setAttribute("type", 'button');
+deleteBtn.value = "Delete";
+const div6 = document.createElement("div");
+document.body.append(addBtn, deleteBtn, div6);
+
+addBtn.addEventListener("click", () => {
+  const newEl = document.createElement("p");
+  newEl.innerText = `Elementas: ${div6.children.length + 1}`;
+  newEl.style.color = "white";
+  newEl.style.border = "2px";
+  newEl.style.backgroundColor = "black";
+  div6.append(newEl);
+})
+
+deleteBtn.addEventListener("click",() => {
+  if(div6.children.length > 0){
+    let lastEl = div6.children[div6.children.length - 1];
+    lastEl.remove();
+  } else {
+    window.alert("There are no elements in the list!")
+  }
+})
+
+// 7. sukurti click counter - kad kiekvienas mygtuko paspaudimas butu registruojamas
+// Skaicius turi matytis salia mygtuko
+
+const counterBtn = document.createElement("input");
+counterBtn.setAttribute("type", "button");
+counterBtn.value = "Click me";
+const counterP = document.createElement("p");
+
+let count = 0;
+counterP.innerText = `Click count: ${count}`;
+counterBtn.addEventListener("click", () => {
+  count++;
+  counterP.innerText = `Click count: ${count}`;
+}) 
+
+document.body.append(counterBtn, counterP);
+
+*/
+///////////////////////////////////////////////////////////////////////////////////////
+
+/*  5.2 uzduotis */
+/*
+    1. Turi buti galimybe koreguoti iraso duomenis, paselectinus irasa pagal jo id.
+    2. galima surasti konkrecia preke pagal jos id (atskiras input). Ir surasta preke
+    atvaizduoti atskiroje lenteleje (kaip pirkiniu krepseli).
+    3. galima istrinti konkrecia preke pagal jos id. Istrinta preke turi pradingtri
+    is localStorage ir abieju lenteliu (jei atvaizduoajama abiejose). jei tokio input
+    nerada - rodyti informacini pranesima.
+*/

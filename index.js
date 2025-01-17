@@ -1,4 +1,7 @@
 "use strict";
+
+
+
 /*
 let skaicius = 3;
 console.log(typeof skaicius);
